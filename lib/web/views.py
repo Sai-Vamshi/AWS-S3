@@ -1,21 +1,24 @@
 """Views of application front end"""
 import json
+
+from django.conf import settings
 from django.http import HttpResponse
 from django.shortcuts import render
 from yellowant import YellowAnt
-from yellowant_api.models import UserIntegration, awss3
+from ..yellowant_api.models import UserIntegration, awss3
 # Create your views here.
 
 
 def index(request, path):
     """Basic home page request"""
     context = {
+        "base_href": settings.BASE_HREF,
+        "application_id": settings.YA_APP_ID,
         "user_integrations": []
     }
-
     # Appends each integrations to the user integrations
     if request.user.is_authenticated:
-        user_integrations = UserIntegration.objects.filter(user=request.user)
+        user_integrations = UserIntegration.objects.filter(user=request.user.id)
         for user_integration in user_integrations:
             context["user_integrations"].append(user_integration)
 
@@ -28,7 +31,7 @@ def userdetails(request):
     """ Function which returns all the user integrations to be displayed on Home page"""
     user_integrations_list = []
     if request.user.is_authenticated:
-        user_integrations = UserIntegration.objects.filter(user=request.user)
+        user_integrations = UserIntegration.objects.filter(user=request.user.id)
         for user_integration in user_integrations:
 
             # Checks if that particular integration is integrated with AWS or not

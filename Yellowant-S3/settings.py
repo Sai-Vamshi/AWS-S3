@@ -21,7 +21,7 @@ YA_OAUTH_URL = "https://www.yellowant.com/api/oauth2/authorize/"
 # URL to receive oauth2 codes from YA for user authentication. As a developer,
 # you need to provide this URL in the YA
 # developer console so that YA knows exactly where to send the oauth2 codes.
-YA_REDIRECT_URL = "http://4053fc3a.ngrok.io/yellowant-oauth-redirect/"
+YA_REDIRECT_URL = "http://cefd30ff.ngrok.io/yellowant-oauth-redirect/"
 
 # Numerical ID generated when you register your application through the YA developer console
 YA_APP_ID = os.environ.get("YA_APP_ID", 348)
@@ -41,6 +41,7 @@ YA_VERIFICATION_TOKEN = os.environ.get("YA_VERIFICATION_TOKEN", "NNIYOBx5N9GETDo
                                                                 "b7fBTfnq4GlY03CXxacQRLCmnPkcbddd"
                                                                 "WPfg6lBuHP1emvdRkiyqLLyAoSWN76V")
 
+BASE_HREF="/"
 ### END YellowAnt specific settings ###
 
 
@@ -60,8 +61,8 @@ ALLOWED_HOSTS = ["*"]
 # Application definition
 
 INSTALLED_APPS = [
-    'yellowant_api.apps.YellowantApiConfig',
-    'web',
+    'lib.yellowant_api',
+    'lib.web',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

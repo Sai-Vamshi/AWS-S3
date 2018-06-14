@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 from django.conf import settings
 from yellowant import YellowAnt
 from django.views.decorators.csrf import csrf_exempt
-from yellowant_command_center.command_center import CommandCenter
+from ..yellowant_command_center.command_center import CommandCenter
 import boto3
 from .models import YellowAntRedirectState, UserIntegration, awss3
 
@@ -24,7 +24,7 @@ def request_yellowant_oauth_code(request):
 
     # save the relation between user and state
     #  so that we can identify the user when YA returns the oauth2 code
-    YellowAntRedirectState.objects.create(user=user, state=state)
+    YellowAntRedirectState.objects.create(user=user.id, state=state)
 
     # Redirect the application user to the YA authentication page.
     # Note that we are passing state, this app's client id,

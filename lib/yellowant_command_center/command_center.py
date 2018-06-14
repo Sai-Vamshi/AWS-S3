@@ -5,7 +5,7 @@
 from yellowant.messageformat import MessageClass, MessageAttachmentsClass
 import boto3
 import botocore
-from yellowant_api.models import awss3, UserIntegration
+from ..yellowant_api.models import awss3, UserIntegration
 
 
 class CommandCenter(object):
