@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block title %}Home{% endblock %}
+<!--<base href="/">-->
 {% block base %}<base href="{{base_href}}">{% endblock %}
 {% block content %}
 
@@ -9,7 +10,7 @@
   var djangoConstants ={
     csrftoken: '{{ csrf_token }}',
     base_href :"/",
-    application_id: '{{ application_id }}',
+    application_id:'{{ application_id }}',
   };
 </script>
  {% comment %} {% if user.is_authenticated %}
@@ -58,9 +59,10 @@
   <script src="https://s3.amazonaws.com/ya-stage-common/angular-static/angular.js/1.6.4/angular-aria.min.js"></script>
 
 
+    <script src="{% static "dist/main.js" %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static "dist/main.css" %}">
 
-
-  <script src="http://localhost:3011/bundle/main.js"></script>
+  <!--<script src="http://localhost:3011/bundle/main.js"></script>-->
 
 </div>
 

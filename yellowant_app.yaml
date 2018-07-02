@@ -1,0 +1,49 @@
+api_url: http://cefd30ff.ngrok.io/yellowant-api/
+creator_email: saivamshipavan@gmail.com
+documentation_url: https://yellowant.com/documentation/
+functions:
+  list-buckets:
+    function_type: 1
+    input_args: {}
+    invoke_name: list-buckets
+    is_active: 1
+    max_retries: 0
+    name: List Buckets
+    output_keys: {}
+    privacy_mode: 0
+    rate_limited: 0
+    short_description: Lists the buckets in the S3
+    user_rate_limit: 0.0
+  start-bucket:
+    function_type: 1
+    input_args:
+      Bucket:
+        arg_type: 14
+        description: The name of the Bucket
+        example: mybucket
+        name: Bucket
+        required: 1
+    invoke_name: start-bucket
+    is_active: 1
+    max_retries: 0
+    name: Start Bucket
+    output_keys: {}
+    privacy_mode: 0
+    rate_limited: 0
+    short_description: To start a bucket
+    user_rate_limit: 0.0
+icon_url: https://static1.squarespace.com/static/5500a991e4b0ed07e64029e1/55073e80e4b08d28db62c5a3/55e3ae4fe4b0b7c58537c4e4/1440984656162/aws-s3-logo.png?format=500w
+install_page_url: https://yellowant.com/install/
+invoke_name: awss3
+is_active: 1
+is_production_or_sandbox: 0
+long_description: ''
+name: AWS-S3
+privacy_policy_url: https://yellowant.com/privacy/
+rate_limit: 0.0
+rate_limited: 0
+redirect_uris: http://cefd30ff.ngrok.io/yellowant-oauth-redirect/
+short_description: To manage S3 of AWS from Yellowant
+user_rate_limit: 0.0
+visibility_scope: 0
+website: https://yellowant.com/install/
