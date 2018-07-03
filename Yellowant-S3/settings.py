@@ -88,7 +88,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'Lambda.urls'
+ROOT_URLCONF = 'AWS-S3.urls'
 
 TEMPLATES = [
     {
@@ -106,7 +106,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'Lambda.wsgi.application'
+WSGI_APPLICATION = 'AWS-S3.wsgi.application'
 
 
 # Database
@@ -115,7 +115,7 @@ WSGI_APPLICATION = 'Lambda.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'lambda',
+        'NAME': 'awss3',
         'USER': "mysqltest",
         'PASSWORD': "pass",
         'HOST' : "localhost",
