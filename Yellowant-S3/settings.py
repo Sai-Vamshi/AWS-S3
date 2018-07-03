@@ -88,7 +88,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'AWS-S3.urls'
+ROOT_URLCONF = 'Yellowant-S3.urls'
 
 TEMPLATES = [
     {
@@ -106,7 +106,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'AWS-S3.wsgi.application'
+WSGI_APPLICATION = 'Yellowant-S3.wsgi.application'
 
 
 # Database
