@@ -48,9 +48,9 @@ def userdetails(request):
     return HttpResponse(json.dumps(user_integrations_list), content_type="application/json")
 
 
-def delete_integration(request, acccount_id=None):
+def delete_integration(request, id=None):
     """ Function for deleting an integration by taking the id as input."""
-    access_token_dict = UserIntegration.objects.get(id=acccount_id)
+    access_token_dict = UserIntegration.objects.get(id=id)
     access_token = access_token_dict.yellowant_integration_token
     user_integration_id = access_token_dict.yellowant_integration_id
     url = "https://api.yellowant.com/api/user/integration/%s" % (user_integration_id)

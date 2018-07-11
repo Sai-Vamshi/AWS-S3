@@ -32,7 +32,7 @@ DEV_ENV = os.environ.get('ENV', 'DEV')
 print(DEV_ENV)
 
 if DEV_ENV=="DEV":
-    BASE_URL = "http://54ddefdd.ngrok.io/"
+    BASE_URL = "http://19416d85.ngrok.io/"
     SITE_DOMAIN_URL = "ngrok.io"
 
 elif DEV_ENV=="HEROKU":
